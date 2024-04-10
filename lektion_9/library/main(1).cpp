@@ -1,7 +1,12 @@
 #include <iostream>
 #include <vector>
 
-class Work{
+class IWork{
+public:
+    virtual void print()=0;
+};
+
+class Work : public IWork{
     std::string _artist;
     std::string _name;
 
@@ -12,10 +17,32 @@ public:
 
     std::string getName(){return _name;}
 
-    virtual void print(){
+    virtual void print() override{
         std::cout <<_artist << std::endl << _name << std::endl;
     }
 };
+
+
+class Collection : public IWork{
+private:
+    std::string _name;
+    std::vector<IWork*> _v;
+
+public:
+    Collection(std::string name):_name(name){}
+    void add(IWork& w){
+        _v.push_back(&w);
+    }
+
+    virtual void print() override{
+        std::cout << "---- Collection " << _name << " ----" << std::endl;
+        for(IWork* p :_v){
+            p->print();
+        }
+        std::cout << "---- Collection End ----" << std::endl;
+    }
+};
+
 
 class Library{
     std::vector<Work*> _works;
@@ -24,11 +51,12 @@ public:
     void addWork(Work &work){_works.push_back(&work);}
 
     void printAll(){
-        std::cout << "-------------" << std::endl;
+        std::cout << "------ Library Begin ------" << std::endl;
         for(Work* w : _works){
             w->print();
-            std::cout << "-------------" << std::endl;
+            std::cout << "------------" << std::endl;
         }
+        std::cout << "------ Library end ------" << std::endl;
     }
 
 };

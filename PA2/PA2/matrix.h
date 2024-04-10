@@ -12,23 +12,16 @@ private:
 
 public:
     Matrix(int rows, int cols, double val = 0): _rows(rows), _cols(cols){
-        for(int i=0; i < size; i++){ //Fill vector with val with matrix size
+        for(int i=0; i < size; i++){ // fill vector with val with matrix size
             _data.push_back(val);
         }
     }
 
-
     int size = _rows*_cols;
 
+    int getRows(){return _rows;}
 
-    int getRows(){
-        return _rows;
-    }
-
-
-    int getCols(){
-        return _cols;
-    }
+    int getCols(){return _cols;}
 
 
     virtual void print(){ // print entire matrix in console
@@ -106,26 +99,19 @@ public:
 
 
     std::shared_ptr<Matrix> add(std::shared_ptr<Matrix> matrix){ // overload add method to accept shared pointers
-        return std::make_shared<Matrix>(add(*matrix)); // constructs a Matrix with the result on the Heap and returns shared pointer to object
+        return std::make_shared<Matrix>(add(*matrix)); // constructs a Matrix of the result on the Heap and returns shared pointer to object
     }
 
 
     std::shared_ptr<Matrix> multiply(std::shared_ptr<Matrix> matrix){ // overload multiply method to accept shared pointers
-        return std::make_shared<Matrix>(multiply(*matrix)); // constructs a Matrix with the result on the Heap and returns shared pointer to object
+        return std::make_shared<Matrix>(multiply(*matrix)); // constructs a Matrix of the result on the Heap and returns shared pointer to object
     }
 
 
-    double& operator()(int r, int c){ // overload "()" to call "at(r,c)"
-        return at(r,c);
-    }
+    double& operator()(int r, int c){return at(r,c);} // overload "()" to call "at(r,c)"
 
 
-    Matrix operator+(Matrix m){ // overload "+" to call "add"
-        return add(m);
-    }
+    Matrix operator+(Matrix m){return add(m);} // overload "+" to call "add"
 
 
-    Matrix operator*(Matrix m){ // overload "*" to call "multiply"
-        return multiply(m);
-    }
-};
+    Matrix operator*(Matrix m){return multiply(m);} // overload "*" to call "multiply"

@@ -1,0 +1,3 @@
+/home/faber/cpp-workspace/lektion_9/build-Optimering-Desktop-Debug/CMakeFiles/Optimering.dir
+/home/faber/cpp-workspace/lektion_9/build-Optimering-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/faber/cpp-workspace/lektion_9/build-Optimering-Desktop-Debug/CMakeFiles/rebuild_cache.dir

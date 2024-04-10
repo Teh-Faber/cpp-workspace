@@ -1,0 +1,3 @@
+/home/faber/cpp-workspace/lektion_9/build-library-Desktop-Debug/CMakeFiles/library.dir
+/home/faber/cpp-workspace/lektion_9/build-library-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/faber/cpp-workspace/lektion_9/build-library-Desktop-Debug/CMakeFiles/rebuild_cache.dir
