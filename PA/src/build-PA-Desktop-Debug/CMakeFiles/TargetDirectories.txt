@@ -1,0 +1,7 @@
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/PA.dir
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/install.dir
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/install/local.dir
+/home/faber/cpp-workspace/PA/src/build-PA-Desktop-Debug/CMakeFiles/install/strip.dir

@@ -1,0 +1,3 @@
+/home/faber/cpp-workspace/lektion_6/build-lotr-Desktop-Debug/CMakeFiles/lotr.dir
+/home/faber/cpp-workspace/lektion_6/build-lotr-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/faber/cpp-workspace/lektion_6/build-lotr-Desktop-Debug/CMakeFiles/rebuild_cache.dir

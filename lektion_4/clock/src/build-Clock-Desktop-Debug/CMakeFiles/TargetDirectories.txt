@@ -1,0 +1,3 @@
+/home/faber/cpp-workspace/lektion_4/clock/src/build-Clock-Desktop-Debug/CMakeFiles/myExe.dir
+/home/faber/cpp-workspace/lektion_4/clock/src/build-Clock-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/faber/cpp-workspace/lektion_4/clock/src/build-Clock-Desktop-Debug/CMakeFiles/rebuild_cache.dir
