@@ -1,0 +1,21 @@
+# ninja log v5
+0	144	1713341829778109624	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+145	187	1713341829822109644	error_handling	c5d9f896ac344821
+1	156	1713341868310127995	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+156	201	1713341868354128016	error_handling	c5d9f896ac344821
+1	145	1713341891254139371	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+146	188	1713341891298139392	error_handling	c5d9f896ac344821
+1	150	1713341944050166632	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+150	197	1713341944098166657	error_handling	c5d9f896ac344821
+0	181	1713342265158358420	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+181	222	1713342265226358464	error_handling	c5d9f896ac344821
+1	202	1713342814630897902	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+202	245	1713342814670901470	error_handling	c5d9f896ac344821
+1	209	1713342828984162985	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+209	253	1713342829024166469	error_handling	c5d9f896ac344821
+1	211	1713342922731725862	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+211	254	1713342922775729148	error_handling	c5d9f896ac344821
+0	228	1713342940129006294	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+228	271	1713342940173009484	error_handling	c5d9f896ac344821
+0	212	1713342987364307670	CMakeFiles/error_handling.dir/main.cpp.o	8bf081c6fbd25ed
+212	258	1713342987412310899	error_handling	c5d9f896ac344821

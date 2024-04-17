@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "eksamens_opg",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "eksamens_opg1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eksamens_opg1-Debug-ccf51d7455ddbfb9fe36.json",
+					"name" : "eksamens_opg1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eksamens_opg2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eksamens_opg2-Debug-8704fe6b141b101097b0.json",
+					"name" : "eksamens_opg2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/faber/cpp-workspace/lektion_10/build-eksamens_opg-Desktop-Debug",
+		"source" : "/home/faber/cpp-workspace/lektion_10/eksamens_opg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

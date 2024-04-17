@@ -2,22 +2,25 @@
 
 #include <iostream>
 #include <vector>
+#include <stdexcept>
 #include <memory>
+
+using namespace std;
 
 class Matrix{
 private:
-    std::vector<double> _data;
+    vector<double> _data;
     int _rows;
     int _cols;
 
 public:
     Matrix(int rows, int cols, double val = 0): _rows(rows), _cols(cols){
-        for(int i=0; i < size; i++){ // fill vector with val with matrix size
+        for(int i=0; i < size(); i++){ // fill vector with val with matrix size
             _data.push_back(val);
         }
     }
 
-    int size = _rows*_cols;
+    int size(){return _rows*_cols;}
 
     int getRows(){return _rows;}
 
@@ -27,11 +30,11 @@ public:
     virtual void print(){ // print entire matrix in console
         for(int i=0; i < _rows; ++i){ // all rows
             for(int j=0; j < _cols; ++j){ // all cols
-                std::cout << _data[i*_cols + j] << "\t";
+                cout << _data[i*_cols + j] << "\t";
             }
-            std::cout << "\n";
+            cout << "\n";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
 
@@ -53,10 +56,10 @@ public:
     Matrix add(Matrix& matrix){ // check size & return the elementwise sum of matrice
         Matrix res(_rows, _cols, 0);
 
-        if(_rows != matrix._rows || _cols != matrix._cols) // if not equal in size return zeros
-            return res;
+        // if not equal in size throw error
+        if(_rows != matrix._rows || _cols != matrix._cols) throw invalid_argument("Matrices are not equal in size");
 
-        for(int i=0; i < size; ++i){ // sum all elements
+        for(int i=0; i < size(); ++i){ // sum all elements
             res._data[i] = _data[i] + matrix._data[i];
         }
 
@@ -68,8 +71,8 @@ public:
         Matrix res(_rows, matrix._cols, 0);
         double sum = 0;
 
-        if(_cols != matrix._rows) // if not compatible return zeros
-            return res;
+        // if not compatible throw error
+        if(_cols != matrix._rows) throw invalid_argument("Matrices are not compatible");
 
         for(int r=0; r < _rows; ++r){ // each row in matrix A
             for(int c=0; c < matrix._cols; ++c){ // each col in matrix B
@@ -87,7 +90,7 @@ public:
     virtual void transpose(){
         Matrix temp(_cols,_rows);
 
-        for(int i=0; i < size; i++){ // set _data from _rows = temp._cols & _cols = temp._rows
+        for(int i=0; i < size(); i++){ // set _data from _rows = temp._cols & _cols = temp._rows
             temp.set(i%_cols, i/_cols, _data[i]); // i%_cols = temp._rows
         }
 
@@ -98,13 +101,13 @@ public:
     }
 
 
-    std::shared_ptr<Matrix> add(std::shared_ptr<Matrix> matrix){ // overload add method to accept shared pointers
-        return std::make_shared<Matrix>(add(*matrix)); // constructs a Matrix of the result on the Heap and returns shared pointer to object
+    shared_ptr<Matrix> add(shared_ptr<Matrix> matrix){ // overload add method to accept shared pointers
+        return make_shared<Matrix>(add(*matrix)); // constructs a Matrix of the result on the Heap and returns shared pointer to object
     }
 
 
-    std::shared_ptr<Matrix> multiply(std::shared_ptr<Matrix> matrix){ // overload multiply method to accept shared pointers
-        return std::make_shared<Matrix>(multiply(*matrix)); // constructs a Matrix of the result on the Heap and returns shared pointer to object
+    shared_ptr<Matrix> multiply(shared_ptr<Matrix> matrix){ // overload multiply method to accept shared pointers
+        return make_shared<Matrix>(multiply(*matrix)); // constructs a Matrix of the result on the Heap and returns shared pointer to object
     }
 
 
@@ -115,3 +118,5 @@ public:
 
 
     Matrix operator*(Matrix m){return multiply(m);} // overload "*" to call "multiply"
+
+};

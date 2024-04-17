@@ -4,6 +4,8 @@
 #include <cmath>
 #include "matrix.h"
 
+using namespace std;
+
 class RotMat2D : public Matrix{
     double _angle;
 
@@ -21,7 +23,7 @@ public:
     }
 
     virtual void print() override{ // print angle with matrix
-        std::cout << "Rotation angle: " << _angle*(180.0/M_PI) << " degrees" << std::endl;
+        cout << "Rotation angle: " << _angle*(180.0/M_PI) << " degrees" << endl;
         Matrix::print();
     }
 

@@ -24,7 +24,7 @@ class ExtentedLog: public Log{ // extented log derived from Log
 private:
     std::vector<std::string> _sVec;
 public:
-    virtual void add(std::string str) override{ //
+    virtual void add(std::string str) override{ // add strings to vector
         _sVec.push_back(str);
     }
     virtual void print() override{
