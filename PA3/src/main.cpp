@@ -26,7 +26,7 @@ int main(){
 
     //This center point provides a nice visualization
     int N = 100;
-    cv::Point2f center = cv::Point2f(-0.160701788300366, 1.037566551323223);
+    cv::Point2f center = cv::Point2f(0.460701788300366, 1.037566551323223);
     Mandelbrot mandelbrot(500, 2, center);
     mandelbrot.drawImageToCanvas(N);
     cv::imshow("Mandelbrot",mandelbrot.getCanvas());
