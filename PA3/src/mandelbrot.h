@@ -24,7 +24,7 @@ class Mandelbrot{
 
         for(; z.magnitude() < 2; i++){ // magnitude > 2 means complex sequnce diverges
 
-            z = z*z + x;   // compex sequence z_n+1 = (z_n)² + c
+            z = z*z + x;   // complex sequence z_n+1 = (z_n)² + c
 
             if(i >= maxIterations) return N; // if maxIterations is reached
         }

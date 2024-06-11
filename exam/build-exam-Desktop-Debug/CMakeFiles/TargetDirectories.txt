@@ -1,0 +1,3 @@
+/home/faber/cpp-workspace/exam/build-exam-Desktop-Debug/CMakeFiles/exam.dir
+/home/faber/cpp-workspace/exam/build-exam-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/faber/cpp-workspace/exam/build-exam-Desktop-Debug/CMakeFiles/rebuild_cache.dir

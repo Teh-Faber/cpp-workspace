@@ -54,9 +54,9 @@ public:
                 if(ac->getDaysToDelivery() == i){
                     temp.push_back(ac);
                 }
-                std::sort(temp.begin(), temp.end(), // sort by weight in current priority
-                    [](Cargo* a, Cargo* b){ // lamda expression as comparison function
-                        return a->getWeight() > b->getWeight(); // return a weight that is bigger than b
+                // sort by weight in current priority
+                std::sort(temp.begin(), temp.end(), [](Cargo* a, Cargo* b){ // lamda expression as comparison function
+                        return a->getWeight() > b->getWeight(); // return true is a weight is bigger than b
                     }
                 );
             }
@@ -65,19 +65,21 @@ public:
         }
 
         for(int i = 0; i < 5; i++){ // run through a couple times to ensure that the truck is filled as much as possible
-            for(Cargo* sac : sortedAvailableCargo){
+
+            for(Cargo* sac : sortedAvailableCargo){ // go through all cargo in the sorted order
                 if(t.remainingCapacity() >= sac->getWeight()){ // if there is capacity
                     t.addCargo(*sac); // add cargo to truck
                 }
             }
 
-            for(Cargo ct : t.getAllCargo()){ // remove all cargo from available that is on the truck
+            for(Cargo ct : t.getAllCargo()){ // remove all cargo from sorted available that is on the truck
                 int i = 0; // first pos
                 for(Cargo *sac : sortedAvailableCargo){ // check all elements
                     if(sac->getName() == ct.getName()){ // if name matches
                         sortedAvailableCargo.erase(sortedAvailableCargo.begin()+i); // erase
-                    }
+                    }else{
                     i++; // iterate to next pos
+                    }
                 };
             }
         }
